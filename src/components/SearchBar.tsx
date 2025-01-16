@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 
-const SearchBar = () => {
+const SearchBar = ({ onSearch }) => {
     const [city, setCity] = useState("");
 
     const handleSearch = () => {
-        
+        if(city.trim()) onSearch(city);
     }
 
     return (
