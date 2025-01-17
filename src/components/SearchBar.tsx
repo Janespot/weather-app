@@ -1,7 +1,10 @@
 import React, { useState } from "react";
+import citydata from "../assets/city.list.json";
 
 const SearchBar = ({ onSearch }) => {
     const [city, setCity] = useState("");
+
+    console.log(citydata);
 
     const handleSearch = () => {
         if(city.trim()) onSearch(city);

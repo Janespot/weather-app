@@ -13,6 +13,9 @@ const Weather = () => {
                 params: { city }
             });
             setWeather(response.data);
+
+            console.log(city);
+            console.log(response);
         } catch(error) {
             console.error(error);
         }
@@ -22,6 +25,12 @@ const Weather = () => {
         <>
             <SearchBar onSearch={fetchWeather} />
             {weather && <CurrentWeather weather={weather} />}
+            Today
+            January 5, Wednesday
+            24&deg;
+            Rainy
+            Week days here...
+            
         </>
     )
 }

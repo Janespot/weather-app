@@ -4,8 +4,8 @@ const CurrentWeather = ({ weather }) => {
     return (
         <>
             <h2>{weather.name}</h2>
-            <p> Temp: {weather.temp}<sub>o</sub>C</p>
-            <p>Condition: {weather.description}</p>
+            <p> Temp: {weather.main.temp}<sup>o</sup>C</p>
+            <p>Condition: {weather.weather[0].description}</p>
         </>
     )
 }
